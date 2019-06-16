@@ -1,23 +1,23 @@
 version: '3.1'
 services:
-#  node:
-#    image: 'node:8'
-#    user: node
-#    working_dir: /home/node/app
-#    environment:
-#      - NODE_ENV=production
-#    volumes:
-#      - '.:/home/node/app'
-#    expose:
-#      - '3000'
-#      - '9229'
-#    ports:
-#      - '3000:3000'
-#      - '9229:9229'
-#    command: npm start
-#    network_mode: host
-#    depends_on:
-#      - mongo
+  node:
+    image: 'node:8'
+    user: node
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - '.:/home/node/app'
+    expose:
+      - '3000'
+      - '9229'
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    command: npm start
+    network_mode: host
+    depends_on:
+      - mongo
   mongo:
     image: mongo
     ports:
