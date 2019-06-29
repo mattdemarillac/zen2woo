@@ -15,7 +15,9 @@ class Database {
 
     connect () {
       const mongoDB = 'mongodb://outofbody.com.au:27017/oob_migrate';
-      mongoose.connect(mongoDB, { useNewUrlParser: true });
+      if (mongoose.connection.readyState == 0) {
+        mongoose.connect(mongoDB, {useNewUrlParser: true});
+      }
       return mongoose;
     }
 }

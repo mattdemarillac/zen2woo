@@ -2,11 +2,13 @@ var express = require('express');
 var router = express.Router();
 const CategoriesModel = require('../classes/models/categories');
 const ProductsModel = require('../classes/models/products');
+const AttributesModel = require('../classes/models/attributes');
 
 /* GET /list listings. */
 router.get('/', async (req, res, next) => {
     let categories = [],
-      products = [];
+      products = [],
+      attributes = [];
 
     await CategoriesModel.find({}, (err, docs) => {
       categories = docs
@@ -16,9 +18,14 @@ router.get('/', async (req, res, next) => {
       products = docs
     });
 
+    await AttributesModel.find({}, (err, docs) => {
+      attributes = docs
+    });
+
     res.send({
       'categories': categories,
-      'products': products
+      'products': products,
+      'attributes': attributes
     })
 });
 

@@ -31,6 +31,20 @@ class Importer {
             return data.data;
         });
     }
+
+  /**
+   * Gets a list of products from api and returns result on promise satisfied.
+   * @returns {Promise<AxiosResponse<any>>}
+   */
+  static async getAttributes() {
+    function _requestAttributes() {
+      return axios.get('https://outofbodypiercings.com/wpoob/?attributes');
+    }
+
+    return await _requestAttributes().then((data) => {
+      return data.data;
+    });
+  }
 }
 
 module.exports = Importer;

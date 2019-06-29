@@ -2,10 +2,10 @@ const WooCommerceAPI = require('woocommerce-api');
 
 const WooCommerce = new WooCommerceAPI({
     url: 'https://outofbody.com.au',
-    consumerKey: 'ck_bb6d360d2b67d670a98990ce0312da6b4e2ff457',
-    consumerSecret: 'cs_49848dedf9100622154047edfca9b428e01a0fbe',
-    wpAPI: true,
-    version: 'wc/v3'
+    consumerKey: 'ck_06a8fc29eb56d18e466af7b25b116bbdfc1204b5',
+    consumerSecret: 'cs_b0bc45f7d4f9375e67e68dcfbeb3c347570a3b3a',
+    verifySsl: false,
+    port: 443
 });
 
 module.exports = WooCommerce;
