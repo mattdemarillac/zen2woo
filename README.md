@@ -27,9 +27,12 @@ Formats data and sends it to WooCommerce api.
 
 Backend zen cart API
 http://www.outofbodypiercings.com/wpoob/?attributes
+
 http://www.outofbodypiercings.com/wpoob/?products
+
 http://www.outofbodypiercings.com/wpoob/?categories
-Returns json response.
+
+{returns} json response.
 
 MVC structure:
 
