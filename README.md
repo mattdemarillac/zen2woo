@@ -7,6 +7,7 @@ Script that migrates zen cart stores to woocommerce.
 Install local Node/Yarn and mongoDb server.
 
 `yarn`
+
 `yarn run`
 
 Server runs at localhost:3000
@@ -14,6 +15,7 @@ Server runs at localhost:3000
 ***Docker***
 
 `cd zen2woo`
+
 `docker-compose up -d`
 
 ---
