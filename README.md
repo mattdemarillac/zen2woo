@@ -40,6 +40,7 @@ http://www.outofbodypiercings.com/wpoob/?categories
 MVC structure:
 
 classes/
+
 Contains setting files for mongo database:
 
 zen2woo/classes/database.js
