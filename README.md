@@ -3,6 +3,7 @@ Script that migrates zen cart stores to woocommerce.
 
 **Setup** 
 ***Local***
+
 Install local Node/Yarn and mongoDb server.
 
 `yarn`
@@ -11,8 +12,11 @@ Install local Node/Yarn and mongoDb server.
 Server runs at localhost:3000
 
 ***Docker***
+
 `cd zen2woo`
 `docker-compose up -d`
+
+---
 
 Restfull routes:
 
@@ -48,11 +52,17 @@ Each belongs to an entity such as products, categories, attributes and terms.
 classes/schema classes/models
 Handles mongoose orm mapping for mongodb
 
+---
+
 controllers/
 Handles importing of data and exporting via classes and mongodb
 
+---
+
 views/
 Not used
+
+---
 
 WooCommerce is hosted on Digital Ocean server.
 It is not for production, so can be rebuilt as needed.
