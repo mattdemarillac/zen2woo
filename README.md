@@ -3,6 +3,7 @@ Script that migrates zen cart stores to woocommerce.
 
 **Setup** 
 ***Local***
+
 `lando start`
 
 Install local Node/Yarn and mongoDb server.
