@@ -1,6 +1,6 @@
 var async = require("async");
 const CategoriesModel = require('../models/categories')
-const keyMapModel = require('../models/keyMap');
+const keyMapModel = require('../models/keyMap')[0];
 const database = require('../database.js')
 const woocommerce = require('../woocommerce');
 
@@ -76,7 +76,7 @@ class CategoriesMigrate {
         callback(null, keys)
       },
       async (keys, callback) => {
-        await keyMapModel.deleteMany({})
+        // await keyMapModel.deleteMany({})
         await keyMapModel.create(...keys)
         callback(null, keys)
       },

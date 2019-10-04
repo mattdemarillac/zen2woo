@@ -4,7 +4,7 @@ const categories = require('../classes/migrate/categories')
 const attributes = require('../classes/migrate/attributes')
 
 router.get('/', async (req, res, next) => {
-  // const categoriesMigrate = new categories()
+  const categoriesMigrate = new categories()
   const attributesMigrate = new attributes()
 
   // await categoriesMigrate.execute()

@@ -1,0 +1,29 @@
+proxy:
+  appserver:
+    - "oob-migrate.lndo.site"
+    - "oob-migrate.lndo.site:9229"
+name: oob-migrate
+recipe: mean
+config:
+  node: 10
+  build:
+    - npm install
+  command: npm start
+  database: mongo:4.0
+  globals: []
+  ssl: false
+  config:
+    database: mongo
+  portfoward: true
+  ports:
+    - "9229"
+    - "3000"
+services:
+  database:
+    port: 27017
+    portforward: true
+  appserver:
+    portforward: 9229
+    overrides:
+      ports: ['9229:9229']
+
