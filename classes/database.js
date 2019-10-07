@@ -14,7 +14,7 @@ class Database {
     }
 
     connect () {
-      const mongoDB = 'mongodb://database/oob_migrate';
+      const mongoDB = 'mongodb://127.0.0.1/oob_migrate';
       if (mongoose.connection.readyState == 0) {
         mongoose.connect(mongoDB, {useNewUrlParser: true});
       }
