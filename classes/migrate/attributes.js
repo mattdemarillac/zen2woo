@@ -56,7 +56,7 @@ class AttributesMigrate {
         const newItems = await post({'create': [...formatted]})
         let newTerms = [];
 
-        await newItems.create.map(async (item, index) => {
+        await async.forEachOf(newItems.create, async (item, index, callback) => {
           const formattedTerms = items[index].terms.map(term => {
             return {
               id: term.id,
@@ -66,23 +66,23 @@ class AttributesMigrate {
           });
 
           let chunks = _chunk(formattedTerms, 99);
-
-          chunks = await chunks.map(async (piece) => {
+          chunks = await chunks.map(async (err, piece) => {
             return await postTerms({'create': [...piece]}, item.id);
-          });
+          })
 
-          newTerms = _flatten(chunks);
 
-          const termKeys = newTerms.create.map(item => {
-            const old = formattedTerms.filter(oldItem => {
-              return oldItem.name === item.name
-            });
-            return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
-          });
-
-          await keyMapModel.create(...keys)
-
+          newTerms.push(_flatten(chunks));
+          callback();
         });
+
+        const termKeys = await newTerms.create.map(item => {
+          const old = formattedTerms.filter(oldItem => {
+            return oldItem.name === item.name
+          });
+          return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
+        });
+
+        await keyMapModel[2].create(...termKeys)
 
         const keys = newItems.create.map(item => {
           const old = items.filter(oldItem => {
