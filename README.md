@@ -18,7 +18,7 @@ Server runs at localhost:3000
 
 `cd zen2woo`
 
-`docker-compose up -d`
+`  ./setup.sh 
 
 ---
 
