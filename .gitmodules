@@ -1,0 +1,3 @@
+[submodule "oobwordpress"]
+	path = oobwordpress
+	url = https://github.com/mattdemarillac/oobwordpress

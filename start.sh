@@ -1,4 +1,4 @@
 docker-compose up -d
-cd ../wp
+cd oobwordpress
 lando start
-cd ../migrate
+cd ..
