@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9a09425-849d-4255-96ed-7568e444b9ff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/migrate/attributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/attributes.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -237,6 +236,8 @@
       <workItem from="1570422503693" duration="5805000" />
       <workItem from="1570428335944" duration="1517000" />
       <workItem from="1570943053852" duration="4579000" />
+      <workItem from="1572069641581" duration="84197000" />
+      <workItem from="1572153907513" duration="716000" />
     </task>
     <servers />
   </component>
@@ -291,43 +292,36 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>86</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>77</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="181" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>73</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>27</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>69</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>68</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>67</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="198" />
         </line-breakpoint>
       </breakpoints>
