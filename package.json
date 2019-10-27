@@ -18,13 +18,11 @@
     "woocommerce-api": "^1.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
+    "@babel/core": "^7.0.0",
+    "@babel/node": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.2",
-    "babel-core": "^6.26.3",
+    "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "babel-preset-es2015": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.2",
