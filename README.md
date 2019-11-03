@@ -2,6 +2,15 @@
 Script that migrates zen cart stores to woocommerce.
 
 **Setup** 
+
+Install docker and lando
+
+https://docs.lando.dev/basics/
+
+https://docs.docker.com/v17.09/engine/installation/
+
+https://docs.docker.com/compose/install/
+
 ***Local***
 
 `git submodules pull`
