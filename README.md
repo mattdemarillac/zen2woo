@@ -4,23 +4,24 @@ Script that migrates zen cart stores to woocommerce.
 **Setup** 
 ***Local***
 
-`lando start`
+`git submodules pull`
 
-Install local Node/Yarn and mongoDb server.
+`docker-compose up -d`
 
-`yarn`
+`cd oobwordpress`
 
-`yarn run`
+ `./init.sh`
 
 Server runs at localhost:3000
 
-***Docker***
+Lando runs at http://oob2.lndo.site/
 
-`cd zen2woo`
+This is a dev project, no data is sensitive
 
-`  ./setup.sh 
+Wordpress login is: http://oob2.lndo.site/wp-admin
 
----
+admin:admin
+
 
 Restfull routes:
 
