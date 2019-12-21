@@ -10,6 +10,10 @@ const woocommerce = require('../woocommerce');
 class AttributesMigrate {
 
   async execute() {
+    this.data = {
+      attributes: []
+    };
+
     const list = new database();
     await list.connect();
 
@@ -33,9 +37,10 @@ class AttributesMigrate {
       })
     }
 
-    return await async.waterfall([
+    await async.waterfall([
       async function findAttributes(callback) {
         const attributes = await AttributesModel.find({}, null, {lean: true}).select({})
+        this.data.attributes = attributes
         callback(null, attributes)
       },
       async (items, callback) => {
@@ -99,6 +104,12 @@ class AttributesMigrate {
         callback(null)
       }
     ])
+
+    return this.getData();
+  }
+
+  getData() {
+    return this.data
   }
 }
 
