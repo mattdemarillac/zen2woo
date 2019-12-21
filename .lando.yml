@@ -1,4 +1,4 @@
-name: oob
+name: oob-migrate
 recipe: mean
-compose:
-  - docker-compose.yml
+config:
+  webroot: .

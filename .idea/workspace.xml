@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f9a09425-849d-4255-96ed-7568e444b9ff" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="f9a09425-849d-4255-96ed-7568e444b9ff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.lando.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/migrate/attributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/attributes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/export.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/export.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +27,11 @@
   </component>
   <component name="ProjectId" id="1Q5S58VyskEE4PDFrjZ3fT2RiYe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -38,7 +50,7 @@
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -50,18 +62,6 @@
       <recent name="$PROJECT_DIR$/migrate" />
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Attach to Node.js/Chrome.nodeapi">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="3000" restartOnDisconnect="true">
@@ -130,9 +130,9 @@
     <list>
       <item itemvalue="Attach to Node.js/Chrome.nodeapi" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Docker.migrate/Dockerfile" />
-      <item itemvalue="Docker.migrate: Compose Deployment" />
       <item itemvalue="Docker.apiphp" />
+      <item itemvalue="Docker.migrate: Compose Deployment" />
+      <item itemvalue="Docker.migrate/Dockerfile" />
       <item itemvalue="Docker.migrator-wp-zen: Compose Deployment" />
       <item itemvalue="npm.start" />
     </list>
@@ -147,35 +147,15 @@
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e9e4993" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e9e4993" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@25a38c35" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e9e4993" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@25a38c35" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@60ff3476" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1e9e4993" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@25a38c35" type="9fbbdea:ServiceModel$ServiceNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@76964481" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -236,6 +216,13 @@
       <workItem from="1570943053852" duration="4579000" />
       <workItem from="1572069641581" duration="84197000" />
       <workItem from="1572153907513" duration="1179000" />
+      <workItem from="1572763006300" duration="128000" />
+      <workItem from="1572763284757" duration="599000" />
+      <workItem from="1572825286072" duration="814000" />
+      <workItem from="1572829669396" duration="599000" />
+      <workItem from="1576918818381" duration="78000" />
+      <workItem from="1576918917921" duration="1668000" />
+      <workItem from="1576920945115" duration="1212000" />
     </task>
     <servers />
   </component>
@@ -264,12 +251,18 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state x="570" y="86" width="982" height="806" key="SettingsEditor" timestamp="1576918896226">
+      <screen x="74" y="27" width="1974" height="1125" />
+    </state>
+    <state x="570" y="86" width="982" height="806" key="SettingsEditor/74.27.1974.1125@74.27.1974.1125" timestamp="1576918896226" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>93</line>
+          <line>95</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -279,7 +272,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>55</line>
+          <line>36</line>
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -289,43 +282,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>86</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>77</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>73</line>
-          <option name="timeStamp" value="187" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
           <line>27</line>
           <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>69</line>
-          <option name="timeStamp" value="196" />
+          <line>26</line>
+          <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>68</line>
-          <option name="timeStamp" value="197" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/classes/migrate/attributes.js</url>
-          <line>67</line>
-          <option name="timeStamp" value="198" />
+          <line>17</line>
+          <option name="timeStamp" value="205" />
         </line-breakpoint>
       </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="dart-exception" />
-      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
