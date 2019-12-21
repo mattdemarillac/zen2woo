@@ -8,9 +8,9 @@ router.get('/', async (req, res, next) => {
   const attributesMigrate = new attributes()
 
   // await categoriesMigrate.execute()
-  const attributes = await attributesMigrate.execute()
+  const attributesData = await attributesMigrate.execute()
   res.send({
-    attributes: attributes
+    attributes: attributesData
   })
 });
 

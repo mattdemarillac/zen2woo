@@ -10,7 +10,8 @@ services:
     command: yarn start
     portforward:
      - 3000
-     - 9119
+     - 9229
     overrides:
       ports:
         - 3000:3000
+        - 9229:9229

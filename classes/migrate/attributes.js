@@ -39,7 +39,7 @@ class AttributesMigrate {
     // }
 
     await async.waterfall([
-      async function findAttributes(callback) {
+      async (callback) => {
         const attributes = await AttributesModel.find({}, null, {lean: true}).select({})
         this.data.attributes = attributes
         callback(null, attributes)
@@ -60,37 +60,8 @@ class AttributesMigrate {
         await keyMapModel[2].deleteMany({})
 
         const newItems = await post({'create': [...formatted]})
-        let newTerms = [];
 
-        await async.forEachOf(newItems.create, async (item, index, callback) => {
-          const formattedTerms = items[index].terms.map(term => {
-            return {
-              id: term.id,
-              name: term.name,
-              slug: term.slug
-            };
-          });
-
-          this.data.newTerms = formattedTerms
-
-          // let chunks = _chunk(formattedTerms, 99);
-          // chunks = await chunks.map(async (err, piece) => {
-          //   return await postTerms({'create': [...piece]}, item.id);
-          // })
-          //
-          //
-          // newTerms.push(_flatten(chunks));
-          callback();
-        });
-
-        const termKeys = await newTerms.create.map(item => {
-          const old = formattedTerms.filter(oldItem => {
-            return oldItem.name === item.name
-          });
-          return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
-        });
-
-        await keyMapModel[2].create(...termKeys)
+        this.data.newTerms = newItems
 
         const keys = newItems.create.map(item => {
           const old = items.filter(oldItem => {
