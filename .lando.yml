@@ -2,3 +2,6 @@ name: oob-migrate
 recipe: mean
 config:
   webroot: .
+services:
+  database:
+    portforward: 27017

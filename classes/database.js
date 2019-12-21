@@ -15,9 +15,15 @@ class Database {
 
     connect () {
       const mongoDB = 'mongodb://127.0.0.1/oob_migrate';
-      if (mongoose.connection.readyState == 0) {
-        mongoose.connect(mongoDB, {useNewUrlParser: true});
+      const connectWithRetry = function() {
+        return mongoose.connect(mongoDB, {useNewUrlParser: true}, function (err) {
+          if (err) {
+            console.warn('Failed to connect to mongo on startup - retrying in 5 sec', err);
+            setTimeout(connectWithRetry, 5000);
+          }
+        });
       }
+      connectWithRetry()
       return mongoose;
     }
 }
