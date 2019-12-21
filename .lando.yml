@@ -1,5 +1,4 @@
 name: oob-migrate
-recipe: mean
 config:
   webroot: .
 services:
@@ -8,5 +7,10 @@ services:
     portforward: 27017
   appserver:
     type: node:10
-    portforward: 3000
-
+    command: yarn start
+    portforward:
+     - 3000
+     - 9119
+    overrides:
+      ports:
+        - 3000:3000
