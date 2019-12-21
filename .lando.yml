@@ -1,0 +1,4 @@
+name: oob
+recipe: mean
+compose:
+  - docker-compose.yml

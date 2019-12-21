@@ -15,7 +15,6 @@ services:
       - '3000:3000'
       - '9229:9229'
     command: npm start
-    network_mode: host
     depends_on:
       - mongo
   mongo:
@@ -24,13 +23,11 @@ services:
       - '27017:27017'
     expose:
       - '27017'
-    network_mode: host
   mongo-express:
     image: 'mongo-express:latest'
     depends_on:
       - mongo
     volumes: []
-    network_mode: host
     ports:
       - '8081:8081'
     environment:
