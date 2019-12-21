@@ -8,8 +8,10 @@ router.get('/', async (req, res, next) => {
   const attributesMigrate = new attributes()
 
   // await categoriesMigrate.execute()
-  await attributesMigrate.execute()
-  res.sendStatus(200)
+  const attributes = await attributesMigrate.execute()
+  res.send({
+    attributes: attributes
+  })
 });
 
 module.exports = router;
