@@ -4,4 +4,9 @@ config:
   webroot: .
 services:
   database:
+    type: mongo
     portforward: 27017
+  appserver:
+    type: node:10
+    portforward: 3000
+

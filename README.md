@@ -1,7 +1,7 @@
 # zen2woo
 Script that migrates zen cart stores to woocommerce.
 
-**Setup** 
+**Setup**
 
 Install docker and lando
 
@@ -15,11 +15,15 @@ https://docs.docker.com/compose/install/
 
 `git submodules pull`
 
-`docker-compose up -d`
+ `lando start`
+
+ `./start.sh # to update`
 
 `cd oobwordpress`
 
- `./init.sh`
+ `./init.sh # for a full rebuild`
+
+ `lando start # for restart`
 
 Server runs at localhost:3000
 
@@ -39,7 +43,9 @@ Loads data from Zen Cart api(see bellow) and stores it in local mongo db.
 localhost:3000/export
 Formats data and sends it to WooCommerce api.
 
-Backend zen cart API
+## Backend zen cart API
+
+GET Only
 
 http://www.outofbodypiercings.com/wpoob/?attributes
 
@@ -49,7 +55,7 @@ http://www.outofbodypiercings.com/wpoob/?categories
 
 {returns} json response.
 
-MVC structure:
+## MVC structure:
 
 classes/
 

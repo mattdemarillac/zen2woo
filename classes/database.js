@@ -14,17 +14,23 @@ class Database {
     }
 
     connect () {
-      const mongoDB = 'mongodb://127.0.0.1/oob_migrate';
-      const connectWithRetry = function() {
-        return mongoose.connect(mongoDB, {useNewUrlParser: true}, function (err) {
-          if (err) {
-            console.warn('Failed to connect to mongo on startup - retrying in 5 sec', err);
-            setTimeout(connectWithRetry, 5000);
-          }
-        });
+      try {
+        const mongoDB = 'mongodb://database/oob_migrate';
+        const connectWithRetry = () => {
+          return mongoose.connect(mongoDB, {useNewUrlParser: true}, function (err) {
+            if (err) {
+              console.warn('Failed to connect to mongo on startup - retrying in 5 sec', err);
+              setTimeout(connectWithRetry, 5000);
+            } else {
+              console.log('Connection succeeded.')
+            }
+          });
+        }
+        connectWithRetry()
+        return mongoose;
+      } catch (e) {
+
       }
-      connectWithRetry()
-      return mongoose;
     }
 }
 
