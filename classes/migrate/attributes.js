@@ -11,7 +11,8 @@ class AttributesMigrate {
 
   async execute() {
     this.data = {
-      attributes: []
+      attributes: [],
+      newTerms: []
     };
 
     const list = new database();
@@ -27,15 +28,15 @@ class AttributesMigrate {
       })
     }
 
-    const postTerms = async (item, attribute_id) => {
-      return await woocommerce.postAsync('products/attributes/' + attribute_id + '/terms/batch', item).then(result => {
-        return JSON.parse(result.toJSON().body)
-      }).error(error => {
-        console.error(error)
-      }).then(json => {
-        return json
-      })
-    }
+    // const postTerms = async (item, attribute_id) => {
+    //   return await woocommerce.postAsync('products/attributes/' + attribute_id + '/terms/batch', item).then(result => {
+    //     return JSON.parse(result.toJSON().body)
+    //   }).error(error => {
+    //     console.error(error)
+    //   }).then(json => {
+    //     return json
+    //   })
+    // }
 
     await async.waterfall([
       async function findAttributes(callback) {
@@ -70,13 +71,15 @@ class AttributesMigrate {
             };
           });
 
-          let chunks = _chunk(formattedTerms, 99);
-          chunks = await chunks.map(async (err, piece) => {
-            return await postTerms({'create': [...piece]}, item.id);
-          })
+          this.data.newTerms = formattedTerms
 
-
-          newTerms.push(_flatten(chunks));
+          // let chunks = _chunk(formattedTerms, 99);
+          // chunks = await chunks.map(async (err, piece) => {
+          //   return await postTerms({'create': [...piece]}, item.id);
+          // })
+          //
+          //
+          // newTerms.push(_flatten(chunks));
           callback();
         });
 
