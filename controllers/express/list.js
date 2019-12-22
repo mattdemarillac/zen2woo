@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const CategoriesModel = require('../classes/models/categories');
-const ProductsModel = require('../classes/models/products');
-const AttributesModel = require('../classes/models/attributes');
+const CategoriesModel = require('../../classes/models/categories');
+const ProductsModel = require('../../classes/models/products');
+const AttributesModel = require('../../classes/models/attributes');
 
 /* GET /list listings. */
 router.get('/', async (req, res, next) => {

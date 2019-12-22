@@ -1,7 +1,7 @@
 var async = require("async");
 const CategoriesModel = require('../models/categories')
 const keyMapModel = require('../models/keyMap')[0];
-const database = require('../database.js')
+const database = require('../../data/mongo/database.js')
 const woocommerce = require('../woocommerce');
 
 class CategoriesMigrate {
