@@ -1,4 +1,4 @@
-const db = require('../../data/mongo/database');
+const db = require('../database');
 
 const database = new db().connect();
 

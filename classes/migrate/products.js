@@ -1,7 +1,7 @@
 var async = require("async");
 const ProductsModel = require('../models/products')
 const keyMapModel = require('../models/keyMap');
-const database = require('../../data/mongo/database.js')
+const database = require('../database.js')
 const woocommerce = require('../woocommerce');
 
 class ProductsMigrate {

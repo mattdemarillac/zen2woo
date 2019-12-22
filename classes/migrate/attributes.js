@@ -4,7 +4,7 @@ const _flatten = require('lodash/flatten');
 
 const AttributesModel = require('../models/attributes')
 const keyMapModel = require('../models/keyMap');
-const database = require('../../data/mongo/database.js')
+const database = require('../database.js')
 const woocommerce = require('../woocommerce');
 
 class AttributesMigrate {
