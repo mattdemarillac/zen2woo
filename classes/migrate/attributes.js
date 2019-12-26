@@ -57,8 +57,6 @@ class AttributesMigrate {
         callback(null, items, formatted)
       },
       async (items, formatted, callback) => {
-        await keyMapModel[2].deleteMany({})
-
         const newItems = await post({'create': [...formatted]})
 
         this.data.newTerms = newItems
@@ -69,6 +67,8 @@ class AttributesMigrate {
           });
           return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
         });
+
+        console.log(keys)
 
         callback(null, keys)
       },

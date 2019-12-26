@@ -1,4 +1,7 @@
 name: oob-migrate
+proxy:
+  appserver:
+    - migrate.site:8888
 config:
   webroot: .
 services:
@@ -15,3 +18,10 @@ services:
       ports:
         - 3000:3000
         - 9229:9229
+tooling:
+  npm:
+    service: appserver
+  node:
+    service: appserver
+  yarn:
+    service: appserver
