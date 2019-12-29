@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a09425-849d-4255-96ed-7568e444b9ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/classes/migrate/terms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/models/productsAttributes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classes/schema/productsAttributes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.lando.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.lando.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/migrate/attributes.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/attributes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/models/keyMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/models/keyMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/export.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/export.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/import.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/import.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/import.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/import.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oobwordpress/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/oobwordpress/init.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +53,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/classes/migrate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/classes/schema" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -68,6 +67,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/classes/schema" />
+      <recent name="$PROJECT_DIR$/classes/models" />
       <recent name="$PROJECT_DIR$/classes/migrate" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -166,12 +167,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -247,6 +243,8 @@
       <workItem from="1577110846094" duration="1805000" />
       <workItem from="1577207804309" duration="2000" />
       <workItem from="1577346172078" duration="5497000" />
+      <workItem from="1577448389716" duration="599000" />
+      <workItem from="1577604380257" duration="568000" />
     </task>
     <servers />
   </component>
@@ -284,10 +282,10 @@
       <screen x="74" y="27" width="1846" height="1053" />
     </state>
     <state x="461" y="152" width="1084" height="536" key="#com.intellij.execution.impl.EditConfigurationsDialog/74.27.1846.1053@74.27.1846.1053" timestamp="1577347105438" />
-    <state x="785" y="205" width="424" height="454" key="FileChooserDialogImpl" timestamp="1577346622251">
+    <state x="785" y="205" width="424" height="417" key="FileChooserDialogImpl" timestamp="1577450115662">
       <screen x="74" y="27" width="1846" height="1053" />
     </state>
-    <state x="785" y="205" width="424" height="454" key="FileChooserDialogImpl/74.27.1846.1053@74.27.1846.1053" timestamp="1577346622251" />
+    <state x="785" y="205" width="424" height="417" key="FileChooserDialogImpl/74.27.1846.1053@74.27.1846.1053" timestamp="1577450115662" />
     <state width="1804" height="331" key="GridCell.Tab.0.bottom" timestamp="1577347262755">
       <screen x="74" y="27" width="1846" height="1053" />
     </state>

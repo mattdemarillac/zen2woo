@@ -18,6 +18,20 @@ class Importer {
         });
     }
 
+  /**
+   * Gets a list of products attributes and stock from api and returns result on promise satisfied.
+   * @returns {Promise<AxiosResponse<any>>}
+   */
+  static async getProductsAttributes() {
+    function _requestProductsAttributes() {
+      return axios.get('https://outofbodypiercings.com/wpoob/?products_attributes');
+    }
+
+    return await _requestProductsAttributes().then((data) => {
+      return data.data;
+    });
+  }
+
     /**
      * Gets a list of products from api and returns result on promise satisfied.
      * @returns {Promise<AxiosResponse<any>>}
