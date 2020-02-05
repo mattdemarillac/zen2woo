@@ -15,19 +15,9 @@ https://docs.docker.com/compose/install/
 
 `git submodules pull`
 
- `lando start`
+Migration Server runs at localhost:3000
 
- `./start.sh # to update`
-
-`cd oobwordpress`
-
- `./init.sh # for a full rebuild`
-
- `lando start # for restart`
-
-Server runs at localhost:3000
-
-Lando runs at http://oob2.lndo.site/
+Wordpress / Lando runs at http://oob2.lndo.site/
 
 This is a dev project, no data is sensitive
 

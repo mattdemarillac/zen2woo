@@ -15,7 +15,7 @@ class Database {
 
     connect () {
       try {
-        const mongoDB = 'mongodb://database/oob_migrate';
+        const mongoDB = 'mongodb://localhost:27017/oob_migrate';
         const connectWithRetry = () => {
           return mongoose.connect(mongoDB, {useNewUrlParser: true}, function (err) {
             if (err) {

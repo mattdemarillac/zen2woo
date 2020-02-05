@@ -1,27 +1,10 @@
 name: oob-migrate
-proxy:
-  appserver:
-    - migrate.site:8888
 config:
   webroot: .
 services:
   database:
     type: mongo
     portforward: 27017
-  appserver:
-    type: node:10
-    command: yarn start
-    portforward:
-     - 3000
-     - 9229
-    overrides:
-      ports:
-        - 3000:3000
-        - 9229:9229
 tooling:
-  npm:
-    service: appserver
-  node:
-    service: appserver
-  yarn:
-    service: appserver
+  mongo:
+    service: database
