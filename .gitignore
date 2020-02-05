@@ -4,3 +4,4 @@ oobwordpress/
 *.swp
 *.save
 yarn.lock
+package-lock.json
