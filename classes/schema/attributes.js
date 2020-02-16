@@ -1,9 +1,13 @@
-const db = require('../database');
+const mongoose = require('mongoose')
 
-const database = new db().connect();
+// Define a schema
+const Schema = mongoose.Schema
 
-//Define a schema
-const Schema = database.Schema;
+const TermsSchema = new Schema({
+  'id': Number,
+  'name': String,
+  'slug': String
+})
 
 const AttributesSchema = new Schema({
   'id': Number,
@@ -12,7 +16,7 @@ const AttributesSchema = new Schema({
   'type': String,
   'order_by': String,
   'has_archives': Boolean,
-  'terms': Array
-});
+  'terms': Array(TermsSchema)
+})
 
-module.exports = AttributesSchema;
+module.exports = AttributesSchema

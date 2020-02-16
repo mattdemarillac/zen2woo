@@ -1,89 +1,47 @@
-var async = require("async");
-const _chunk = require('lodash/chunk');
-const _flatten = require('lodash/flatten');
+var async = require('async')
 
 const AttributesModel = require('../models/attributes')
-const keyMapModel = require('../models/keyMap');
-const database = require('../database.js')
-const woocommerce = require('../woocommerce');
+const keyMapModel = require('../models/keyMap')
+const functions = require('../functions')
 
 class AttributesMigrate {
-
-  async execute() {
-    this.data = {
-      attributes: [],
-      newTerms: []
-    };
-
-    const list = new database();
-    await list.connect();
-
-    const post = async (item) => {
-      return await woocommerce.postAsync('products/attributes/batch', item).then(result => {
-        return JSON.parse(result.toJSON().body)
-      }).error(error => {
-        console.error(error)
-      }).then(json => {
-        return json
-      })
-    }
-
-    // const postTerms = async (item, attribute_id) => {
-    //   return await woocommerce.postAsync('products/attributes/' + attribute_id + '/terms/batch', item).then(result => {
-    //     return JSON.parse(result.toJSON().body)
-    //   }).error(error => {
-    //     console.error(error)
-    //   }).then(json => {
-    //     return json
-    //   })
-    // }
-
+  async execute () {
     await async.waterfall([
       async (callback) => {
-        const attributes = await AttributesModel.find({}, null, {lean: true}).select({})
-        this.data.attributes = attributes
+        const attributes = await AttributesModel.find({}, null, { lean: true }).select({})
         callback(null, attributes)
       },
-      async (items, callback) => {
-        const formatted = items.map(item => {
+      async (attributes, callback) => {
+        const formatted = await attributes.map(item => {
           return {
             name: item.name,
             slug: item.slug,
             type: item.type,
             order_by: item.order_by,
-            has_archives: item.has_archives,
+            has_archives: item.has_archives
           }
-        });
-        callback(null, items, formatted)
+        })
+        callback(null, attributes, formatted)
       },
-      async (items, formatted, callback) => {
-        const newItems = await post({'create': [...formatted]})
+      async (oldItems, formatted, callback) => {
+        const newItems = await functions.postAsyncHelper('products/attributes/batch', { 'create': [...formatted] })
 
-        this.data.newTerms = newItems
-
-        const keys = newItems.create.map(item => {
-          const old = items.filter(oldItem => {
-            return oldItem.name === item.name
-          });
-          return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
-        });
-
-        console.log(keys)
-
+        callback(null, newItems, oldItems)
+      },
+      async (newItems, oldItems, callback) => {
+        const keys = await newItems.create.map(newItem => {
+          const oldItem = oldItems.filter(item => {
+            return unescape(`pa_${item.slug}`) === newItem.slug
+          })
+          return { 'type': 'attribute', 'old_id': oldItem.length > 0 ? oldItem[0].id : oldItem.id, 'new_id': newItem.id }
+        })
         callback(null, keys)
       },
       async (keys, callback) => {
-        await keyMapModel[1].deleteMany({})
-        await keyMapModel[1].create(...keys)
+        await keyMapModel.create(...keys)
         callback(null)
       }
     ])
-
-    return this.getData();
-  }
-
-  getData() {
-    return this.data
   }
 }
 

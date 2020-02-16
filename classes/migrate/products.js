@@ -1,28 +1,13 @@
-var async = require("async");
+var async = require('async')
 const ProductsModel = require('../models/products')
-const keyMapModel = require('../models/keyMap');
-const database = require('../database.js')
-const woocommerce = require('../woocommerce');
+const keyMapModel = require('../models/keyMap')
+const functions = require('../functions')
 
 class ProductsMigrate {
-
-  async execute() {
-    const list = new database();
-    await list.connect();
-
-    const post = async (item) => {
-      return await woocommerce.postAsync('products/batch', item).then(result => {
-        return JSON.parse(result.toJSON().body)
-      }).error(error => {
-        console.error(error)
-      }).then(json => {
-        return json
-      })
-    }
-
+  async execute () {
     return await async.waterfall([
-      async function findProducts(callback) {
-        const attributes = await ProductsModel.find({}, null, {lean: true}).select('-terms')
+      async function findProducts (callback) {
+        const attributes = await ProductsModel.find({}, null, { lean: true }).select('-terms')
         callback(null, attributes)
       },
       async (items, callback) => {
@@ -41,24 +26,23 @@ class ProductsMigrate {
               products_viewed: item.products_viewed
             }
           }
-        });
+        })
         callback(null, items, formatted)
       },
       async (items, formatted, callback) => {
-        const newItems = await post({'create': [...formatted]})
+        const newItems = await functions.postAsyncHelper('products/batch', { 'create': [...formatted] })
 
         const keys = newItems.create.map(item => {
           const old = items.filter(oldItem => {
             return oldItem.name === item.name
-          });
-          return {'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id}
-        });
+          })
+          return { 'type': 'product', 'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id }
+        })
 
         callback(null, keys)
       },
       async (keys, callback) => {
-        await keyMapModel[1].remove({})
-        await keyMapModel[1].create(...keys)
+        await keyMapModel.create(...keys)
         callback(null)
       }
     ])

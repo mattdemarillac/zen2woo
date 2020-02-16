@@ -1,13 +1,12 @@
-const db = require('../database');
+const mongoose = require('mongoose')
 
-const database = new db().connect();
-
-//Define a schema
-const Schema = database.Schema;
+// Define a schema
+const Schema = mongoose.Schema
 
 const KeyMapSchema = new Schema({
+  'type': String,
   'old_id': Number,
   'new_id': Number
-});
+})
 
-module.exports = KeyMapSchema;
+module.exports = KeyMapSchema

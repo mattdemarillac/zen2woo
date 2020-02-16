@@ -31,7 +31,7 @@ Restfull routes:
 localhost:3000/import
 Loads data from Zen Cart api(see bellow) and stores it in local mongo db.
 localhost:3000/export
-Formats data and sends it to WooCommerce api.
+Formats data and sends it to WooCommerceAPI api.
 
 ## Backend zen cart API
 
@@ -51,15 +51,15 @@ classes/
 
 Contains setting files for mongo database:
 
-zen2woo/classes/database.js
+zen2woo/classes/mongoose.js
 
 Contains string pointing to local or remote mongo addreess.
 
-zen2woo/classes/woocommerce.js
+zen2woo/classes/wooCommerceAPI.js
 
 Configuration for woocommerce api
 
-zen2woo/classes/import.js
+zen2woo/classes/oobAPI.js
 
 Contains functions that load json from Zen cart api.
 
@@ -86,5 +86,5 @@ Not used
 
 ---
 
-WooCommerce is hosted on Digital Ocean server.
+WooCommerceAPI is hosted on Digital Ocean server.
 It is not for production, so can be rebuilt as needed.

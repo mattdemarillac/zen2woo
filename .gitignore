@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 node_modules/
 oobwordpress/
+logs/
 *.swp
 *.save
 yarn.lock

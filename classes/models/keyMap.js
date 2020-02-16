@@ -1,7 +1,6 @@
-const keyMapModelSchema = require('../schema/keyMap');
-const mongoose = require('mongoose');
+const keyMapModelSchema = require('../schema/keyMap')
+const mongoose = require('mongoose')
 
-const keyMapModel = mongoose.model('keyMap', keyMapModelSchema);
-const attrTermKeyMapModel = mongoose.model('attrKeyMap', keyMapModelSchema);
+const keyMapModel = mongoose.model('keyMap', keyMapModelSchema)
 
-module.exports = [keyMapModel, attrTermKeyMapModel];
+module.exports = keyMapModel

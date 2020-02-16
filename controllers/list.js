@@ -1,32 +1,41 @@
-var express = require('express');
-var router = express.Router();
-const CategoriesModel = require('../classes/models/categories');
-const ProductsModel = require('../classes/models/products');
-const AttributesModel = require('../classes/models/attributes');
+const express = require('express')
+const router = express.Router()
+const CategoriesModel = require('../classes/models/categories')
+const ProductsModel = require('../classes/models/products')
+const AttributesModel = require('../classes/models/attributes')
+const ProductsAttributesModel = require('../classes/models/productsAttributes')
 
 /* GET /list listings. */
 router.get('/', async (req, res, next) => {
-    let categories = [],
-      products = [],
-      attributes = [];
+  const categories = []
+  const products = []
+  const attributes = []
+  const productsAttributes = []
 
-    await CategoriesModel.find({}, (err, docs) => {
-      categories = docs
-    });
+  await CategoriesModel.find({}, (err, docs) => {
+    categories.push(...docs)
+  })
 
-    await ProductsModel.find({}, (err, docs) => {
-      products = docs
-    });
+  await ProductsModel.find({}, (err, docs) => {
+    products.push(docs)
+  })
 
-    await AttributesModel.find({}, (err, docs) => {
-      attributes = docs
-    });
+  await AttributesModel.find({}, (err, docs) => {
+    attributes.push(docs)
+  })
 
-    res.send({
-      'categories': categories,
-      'products': products,
-      'attributes': attributes
-    })
-});
+  await ProductsAttributesModel.find({}, (err, docs) => {
+    productsAttributes.push(docs)
+  })
 
-module.exports = router;
+  res.json.send({
+    'categories': categories,
+    'products': products,
+    'attributes': attributes,
+    'productsAttributes': productsAttributes
+  })
+
+  next()
+})
+
+module.exports = router

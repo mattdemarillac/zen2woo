@@ -1,9 +1,7 @@
-const db = require('../database');
+const mongoose = require('mongoose')
 
-const database = new db().connect();
-
-//Define a schema
-const Schema = database.Schema;
+// Define a schema
+const Schema = mongoose.Schema
 
 const CategoriesSchema = new Schema({
   'id': Number,
@@ -12,6 +10,6 @@ const CategoriesSchema = new Schema({
   'name': String,
   'description': String,
   'display': String
-});
+})
 
-module.exports = CategoriesSchema;
+module.exports = CategoriesSchema
