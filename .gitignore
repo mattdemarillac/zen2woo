@@ -6,3 +6,5 @@ logs/
 *.save
 yarn.lock
 package-lock.json
+*.env
+.env

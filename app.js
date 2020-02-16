@@ -15,6 +15,8 @@ const db = async () => {
 
 var app = express()
 
+app.set(require('dotenv').config())
+
 app.use(logger('common', {
   stream: fs.createWriteStream('./logs/log.txt', { flags: 'a' })
 }))

@@ -1,5 +1,5 @@
 const axios = require('axios')
-
+require('dotenv').config()
 /**
  * Retrieves json data from oob api.
  */
@@ -10,9 +10,15 @@ class Importer {
      */
   static async getProducts () {
     async function _requestProducts () {
-      return await axios.get('https://outofbodypiercings.com/wpoob/?products')
+      return axios({
+        'method': 'post',
+        'url': 'https://outofbodypiercings.com/wpoob/index.php',
+        'data': {
+          'token': process.env.OOBTOKEN,
+          'products': true
+        }
+      })
     }
-
     return await _requestProducts().then((data) => {
       return data.data
     })
@@ -24,7 +30,12 @@ class Importer {
    */
   static async getProductsAttributes () {
     async function _requestProductsAttributes () {
-      return await axios.get('https://outofbodypiercings.com/wpoob/?products_attributes')
+      return await axios.post(
+        'https://outofbodypiercings.com/wpoob/index.php',
+        {
+          'token': process.env.OOBTOKEN,
+          'products_attributes': true
+        })
     }
 
     return await _requestProductsAttributes().then((data) => {
@@ -38,7 +49,12 @@ class Importer {
      */
   static async getCategories () {
     async function _requestCategories () {
-      return await axios.get('https://outofbodypiercings.com/wpoob/?categories')
+      return await axios.post(
+        'https://outofbodypiercings.com/wpoob/index.php',
+        {
+          'token': process.env.OOBTOKEN,
+          'categories': true
+        })
     }
 
     return await _requestCategories().then((data) => {
@@ -52,7 +68,12 @@ class Importer {
    */
   static async getAttributes () {
     async function _requestAttributes () {
-      return await axios.get('https://outofbodypiercings.com/wpoob/?attributes')
+      return await axios.post(
+        'https://outofbodypiercings.com/wpoob/index.php',
+        {
+          'token': process.env.OOBTOKEN,
+          'attributes': true
+        })
     }
 
     return await _requestAttributes().then((data) => {
