@@ -1,4 +1,4 @@
-var async = require('async')
+const async = require('async')
 const CategoriesModel = require('../models/categories')
 const keyMapModel = require('../models/keyMap')
 const functions = require('../functions')
@@ -11,7 +11,7 @@ class CategoriesMigrate {
         callback(null, categories)
       },
       async (categories, callback) => {
-        const formatted = categories.map(item => {
+        const formatted = await categories.map(item => {
           return {
             'parent': item['parent'],
             'menu_order': item['menu_order'],
@@ -38,11 +38,11 @@ class CategoriesMigrate {
             const newItem = functions.slugify(item.slug)
 
             return oldSlug === newItem
-          })[0]
+          })
           if (!old) {
             console.error('Category slugs match not found.')
           }
-          return { 'type': 'category', 'old_id': old.id, 'new_id': item.id }
+          return { 'type': 'category', 'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id }
         })
         callback(null, keys)
       },

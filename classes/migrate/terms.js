@@ -2,12 +2,11 @@ const AttributesModel = require('../models/attributes')
 const keyMapModel = require('../models/keyMap')
 const functions = require('../functions')
 const async = require('async')
+const _chunk = require('lodash/chunk')
+const _filter = require('lodash/filter')
 
 class TermsMigrate {
   async execute () {
-    const _chunk = require('lodash/chunk')
-    const _filter = require('lodash/filter')
-
     await async.waterfall([
       async (callback) => {
         const attributes = await AttributesModel.find({}, null, { lean: true }).select('id terms -_id')

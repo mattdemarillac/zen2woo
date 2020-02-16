@@ -7,33 +7,14 @@ class ProductsMigrate {
   async execute () {
     return await async.waterfall([
       async function findProducts (callback) {
-        const attributes = await ProductsModel.find({}, null, { lean: true }).select('-terms')
-        callback(null, attributes)
+        const products = await ProductsModel.find({}, null, { lean: true }).select('-terms')
+        callback(null, products)
       },
-      async (items, callback) => {
-        const formatted = items.map(item => {
-          return {
-            products_id: item.products_id,
-            products_price: item.products_price,
-            products_quantity: item.products_quantity,
-            products_image: item.products_image,
-            description: {
-              products_id: item.products_id,
-              language_id: item.language_id,
-              products_name: item.products_name,
-              products_description: item.products_description,
-              products_url: item.products_url,
-              products_viewed: item.products_viewed
-            }
-          }
-        })
-        callback(null, items, formatted)
-      },
-      async (items, formatted, callback) => {
-        const newItems = await functions.postAsyncHelper('products/batch', { 'create': [...formatted] })
+      async (products, callback) => {
+        const newItems = await functions.postAsyncHelper('products/batch', { 'create': [...products] })
 
         const keys = newItems.create.map(item => {
-          const old = items.filter(oldItem => {
+          const old = products.filter(oldItem => {
             return oldItem.name === item.name
           })
           return { 'type': 'product', 'old_id': old.length > 0 ? old[0].id : old.id, 'new_id': item.id }
