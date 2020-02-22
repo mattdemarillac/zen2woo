@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9a09425-849d-4255-96ed-7568e444b9ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/api/oobAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/api/oobAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/migrate/categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/migrate/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/migrate/terms.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/migrate/terms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/schema/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/classes/schema/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oobwordpress/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/oobwordpress/init.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,9 +158,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.import" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.export" />
+        <item itemvalue="npm.import" />
         <item itemvalue="Shell Script.start.sh" />
         <item itemvalue="Docker.migrator-wp-zen: Compose Deployment" />
       </list>
@@ -261,7 +261,7 @@
       <workItem from="1581768181653" duration="15825000" />
       <workItem from="1581784065027" duration="711000" />
       <workItem from="1581784795760" duration="17768000" />
-      <workItem from="1581818876720" duration="8409000" />
+      <workItem from="1581818876720" duration="1377000" />
     </task>
     <servers />
   </component>
@@ -320,74 +320,74 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="718" y="173" key="#xdebugger.evaluate/0.27.1920.1053@0.27.1920.1053" timestamp="1581782875502" />
-    <state width="1082" height="646" key="DebuggerActiveHint" timestamp="1581826111267">
+    <state width="1082" height="646" key="DebuggerActiveHint" timestamp="1581817754412">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1082" height="646" key="DebuggerActiveHint/0.27.1920.1053@0.27.1920.1053" timestamp="1581826111267" />
+    <state width="1082" height="646" key="DebuggerActiveHint/0.27.1920.1053@0.27.1920.1053" timestamp="1581817754412" />
     <state x="740" y="168" width="424" height="417" key="FileChooserDialogImpl" timestamp="1578299777069">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="740" y="168" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1578299777069" />
     <state x="785" y="205" width="424" height="417" key="FileChooserDialogImpl/74.27.1846.1053@74.27.1846.1053" timestamp="1577450115662" />
-    <state width="630" height="559" key="GridCell.Tab.0.bottom" timestamp="1581894066804">
+    <state width="630" height="559" key="GridCell.Tab.0.bottom" timestamp="1581819318979">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="630" height="559" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066804" />
+    <state width="630" height="559" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581819318979" />
     <state width="1804" height="331" key="GridCell.Tab.0.bottom/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262755" />
-    <state width="630" height="559" key="GridCell.Tab.0.center" timestamp="1581894066801">
+    <state width="630" height="559" key="GridCell.Tab.0.center" timestamp="1581819318979">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="630" height="559" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066801" />
+    <state width="630" height="559" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581819318979" />
     <state width="1804" height="331" key="GridCell.Tab.0.center/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262754" />
-    <state width="630" height="559" key="GridCell.Tab.0.left" timestamp="1581894066800">
+    <state width="630" height="559" key="GridCell.Tab.0.left" timestamp="1581819318978">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="630" height="559" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066800" />
+    <state width="630" height="559" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581819318978" />
     <state width="1804" height="331" key="GridCell.Tab.0.left/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262754" />
-    <state width="630" height="559" key="GridCell.Tab.0.right" timestamp="1581894066803">
+    <state width="630" height="559" key="GridCell.Tab.0.right" timestamp="1581819318979">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="630" height="559" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066803" />
+    <state width="630" height="559" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581819318979" />
     <state width="1804" height="331" key="GridCell.Tab.0.right/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262755" />
-    <state width="959" height="275" key="GridCell.Tab.1.bottom" timestamp="1581894066690">
+    <state width="959" height="275" key="GridCell.Tab.1.bottom" timestamp="1581818850182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066690" />
+    <state width="959" height="275" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850182" />
     <state width="1804" height="331" key="GridCell.Tab.1.bottom/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262756" />
-    <state width="959" height="275" key="GridCell.Tab.1.center" timestamp="1581894066689">
+    <state width="959" height="275" key="GridCell.Tab.1.center" timestamp="1581818850182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066689" />
+    <state width="959" height="275" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850182" />
     <state width="1804" height="331" key="GridCell.Tab.1.center/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262755" />
-    <state width="959" height="275" key="GridCell.Tab.1.left" timestamp="1581894066689">
+    <state width="959" height="275" key="GridCell.Tab.1.left" timestamp="1581818850181">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066689" />
+    <state width="959" height="275" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850181" />
     <state width="1804" height="331" key="GridCell.Tab.1.left/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262755" />
-    <state width="959" height="275" key="GridCell.Tab.1.right" timestamp="1581894066689">
+    <state width="959" height="275" key="GridCell.Tab.1.right" timestamp="1581818850182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066689" />
+    <state width="959" height="275" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850182" />
     <state width="1804" height="331" key="GridCell.Tab.1.right/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262756" />
-    <state width="959" height="275" key="GridCell.Tab.2.bottom" timestamp="1581894066693">
+    <state width="959" height="275" key="GridCell.Tab.2.bottom" timestamp="1581818850186">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.2.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066693" />
+    <state width="959" height="275" key="GridCell.Tab.2.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850186" />
     <state width="1804" height="331" key="GridCell.Tab.2.bottom/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262757" />
-    <state width="959" height="275" key="GridCell.Tab.2.center" timestamp="1581894066692">
+    <state width="959" height="275" key="GridCell.Tab.2.center" timestamp="1581818850185">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.2.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066692" />
+    <state width="959" height="275" key="GridCell.Tab.2.center/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850185" />
     <state width="1804" height="331" key="GridCell.Tab.2.center/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262757" />
-    <state width="959" height="275" key="GridCell.Tab.2.left" timestamp="1581894066691">
+    <state width="959" height="275" key="GridCell.Tab.2.left" timestamp="1581818850182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.2.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066691" />
+    <state width="959" height="275" key="GridCell.Tab.2.left/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850182" />
     <state width="1804" height="331" key="GridCell.Tab.2.left/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262756" />
-    <state width="959" height="275" key="GridCell.Tab.2.right" timestamp="1581894066692">
+    <state width="959" height="275" key="GridCell.Tab.2.right" timestamp="1581818850186">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="959" height="275" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581894066692" />
+    <state width="959" height="275" key="GridCell.Tab.2.right/0.27.1920.1053@0.27.1920.1053" timestamp="1581818850186" />
     <state width="1804" height="331" key="GridCell.Tab.2.right/74.27.1846.1053@74.27.1846.1053" timestamp="1577347262757" />
     <state x="704" y="222" width="575" height="559" key="MultipleFileMergeDialog" timestamp="1577938157068">
       <screen x="74" y="27" width="1846" height="1053" />
@@ -416,10 +416,10 @@
       <screen x="74" y="27" width="1846" height="1053" />
     </state>
     <state x="661" y="243" key="run.anything.popup/74.27.1846.1053@74.27.1846.1053" timestamp="1576926405267" />
-    <state x="609" y="231" width="699" height="678" key="search.everywhere.popup" timestamp="1581822744207">
+    <state x="609" y="231" width="699" height="678" key="search.everywhere.popup" timestamp="1581773180191">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="609" y="231" width="699" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1581822744207" />
+    <state x="609" y="231" width="699" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1581773180191" />
     <state x="660" y="231" width="672" height="678" key="search.everywhere.popup/74.27.1846.1053@74.27.1846.1053" timestamp="1577933709549" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
@@ -487,12 +487,6 @@
           <url>file://$PROJECT_DIR$/classes/migrate/categories.js</url>
           <line>32</line>
           <option name="timeStamp" value="228" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/classes/api/oobAPI.js</url>
-          <line>22</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="235" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
